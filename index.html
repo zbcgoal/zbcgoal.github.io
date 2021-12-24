@@ -1,420 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<!DOCTYPE HEML PUBLIC>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>
+        From ZXW-NUDT
+    </title>
+        <style>
+            body{text-align:center}
+            html, body
+            {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            
+            div
+            {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+            .nav
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 27px;
+                background-color: white;
+                color: black;
+                text-align: center;
+                line-height: 25px;
+            }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Raleway:400,300,700" rel="stylesheet">
+            a
+            {
+                color: black;
+                text-decoration: none;
+                border-bottom: 1px dashed black;
+            }
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            a:hover
+            {
+                border-bottom: 1px solid red;
+            }
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+            .previous
+            {
+                float: left;
+                margin-left: 10px;
+            }
 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+            .next
+            {
+                float: right;
+                margin-right: 10px;
+            }
 
-</head>
+            .green
+            {
+                color: green;
+            }
 
-<body data-spy="scroll" data-offset="64" data-target="#section-topbar">
+            .red
+            {
+                color: red;
+            }
 
-  <div id="section-topbar">
-    <div id="topbar-inner">
-      <div class="container">
-        <div class="row">
-          <div class="dropdown">
-            <ul id="nav" class="nav">
-              <li class="menu-item"><a class="smothscroll" href="#about" title="About"><i class="fa fa-user"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#resume" title="Resume"><i class="fa fa-file-text-o"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#work" title="Works"><i class="fa fa-briefcase"></i></a></li>
-              <li class="menu-item"><a class="smothscroll" href="#contact" title="Contact"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-            <!--/ uL#nav -->
-          </div>
-          <!-- /.dropdown -->
+            textarea
+            {
+                width: 100%;
+                height: 100%;
+                border: 0;                
+                padding: 0;                
+                margin: 0;                
+                padding-bottom: 20px;              
+            }
 
-          <div class="clear"></div>
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.container -->
+            .block-outer            
+            {                
+                float: left;                
+                width: 22%;                
+                height: 100%;                
+                padding: 5px;                
+                border-left: 1px solid black;                
+                margin: 30px 3px 3px 3px;                
+            }
 
-      <div class="clear"></div>
-    </div>
-    <!--/ #topbar-inner -->
-  </div>
-  <!--/ #section-topbar -->
+            .block-inner            
+            {                
+                height: 68%;                
+            }
 
-  <div id="headerwrap">
-    <div class="container">
-      <div class="row centered">
-        <div class="col-lg-12">
-          <h1>周柏成</h1>
-          <h3>934891551qq@.com</h3>
-        </div>
-        <!--/.col-lg-12 -->
-      </div>
-      <!--/.row -->
-    </div>
-    <!--/.container -->
-  </div>
-  <!--/.#headerwrap -->
+            .one
+            {                
+                border: 0;                
+            }
+        </style>
+    </head>
+<body marginwidth="0" marginheight="0">
+    <canvas id="c" height="356" width="446">
+    <script>
+        var collapsed = true;
+        function toggle()
+        {
+            var fs = top.document.getElementsByTagName('frameset')[0];
+            var f = fs.getElementsByTagName('frame');
+            if (collapsed)
+            {
+                fs.rows = '250px,*';
+                fs.noResize = false;
+                f[0].noResize = false;
+                f[1].noResize = false;
+            }
 
+            else
+            {
+                fs.rows = '30px,*';
+                fs.noResize = true;
+                f[0].noResize = true;
+                f[1].noResize = true;
+            }
+            collapsed = !collapsed;
+        }
+    </script>
 
-  <section id="about" name="about">
-    <div id="intro">
-      <div class="container">
-        <div class="row">
+    <script>
+        var b = document.body;
+        var c = document.getElementsByTagName('canvas')[0];
+        var a = c.getContext('2d');
+        document.body.clientWidth;
+    </script>
 
-          <div class="col-lg-2 col-lg-offset-1">
-            <h5>ABOUT</h5>
-          </div>
-          <div class="col-lg-6">
-            <p>辛苦遭逢起一经，干戈寥落四周星。 
-              山河破碎风飘絮，身世浮沉雨打萍。 
-              惶恐滩头说惶恐，零丁洋里叹零丁。 
-              人生自古谁无死？留取丹心照汗青。</p>
-          </div>
-          <div class="col-lg-3">
-            <p><a href="#"><i class="icon-file"></i></a>
-              <sm>DOWNLOAD PDF</sm>
-            </p>
-          </div>
+    <script>
+        M=Math;
+        Q=M.random;J=[];
+        U=16;
+        T=M.sin;
+        E=M.sqrt;
+        for(O=k=0;x=z=j=i=k<200;)
+        with(M[k]=k?c.cloneNode(0):c)
+        {    
+            width=height=k?32:W=446;
+            with(getContext('2d'))
+            if(k>10|!k)
 
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.container -->
-    </div>
-    <!--/ #intro -->
-  </section>
+            for(
+            font='60px Impact',
+            V='rgba(';I=i*U,fillStyle=k?k==13?V+'205,205,215,.15)':
+            V+(147+I)+','+(k%2?128+I:0)+','+I+',.5)':'#cca',i<7;)
 
+            beginPath(fill(arc(U-i/3,24-i/2,k==13?4-(i++)/2:8-i++,0,M.PI*2,1)));
 
-  <section id="resume" name="resume">
-    <!--EDUCATION DESCRIPTION -->
-    <div class="container desc">
-      <div class="row">
+            else for(;
+            x=T(i),        
+            y=Q()*2-1,        
+            D=x*x+y*y,        
+            B=E(D-x/.9-1.5*y+1),        
+            R=67*(B+1)*(L=k/9+.8)>>1,        
+            i++<W;        
+            )
 
-        <div class="col-lg-2 col-lg-offset-1">
-          <h5>EDUCATION</h5>
-        </div>
-        <div class="col-lg-6">
-          <p>
-            <t>Master of Web Design</t><br/> St. Patrick University <br/>
-            <i>3 Years Course</i>
-          </p>
-        </div>
-        <div class="col-lg-3">
-          <p>
-            <sm>GRADUATING IN MAY 2014</sm><br/>
-            <imp>
-              <sm>IN PROGRESS</sm>
-            </imp>
-          </p>
-        </div>
+            if(D<1)    
+            beginPath(strokeStyle=V+R+','+(R+B*L>>0)+',40,.1)'),        
+            moveTo(U+x*8,U+y*8),        
+            lineTo(U+x*U,U+y*U),        
+            stroke();
 
-        <div class="col-lg-6 col-lg-offset-3">
-          <p>
-            <t>Degree of Web Developer</t><br/> Hastings University <br/>
-            <i>2 Years Course</i>
-          </p>
-        </div>
-        <div class="col-lg-3">
-          <p>
-            <sm>JUNE 2012</sm>
-          </p>
-        </div>
+            for(        
+            y=H=k+E(k++)*25,        
+            R=Q()*W;        
+            P=3,j<H;)    
+            J[O++]=[
+                x+=T(R)*P+Q()*6-3,y+=Q()*U-8,
+                z+=T(R-11)*P+Q()*6-3,
+                j/H*20+((j+=U)>H&Q()>.8?Q(P=9)*4:0)>>1]
+        }
 
-      </div>
-      <!--/.row -->
-      <br>
-      <hr>
-    </div>
-    <!--/.container -->
-  </section>
+        setInterval(function G(m,l)
+        {    
+            A=T(D-11);    
+            if(l)
 
-  <!--WORK DESCRIPTION -->
-  <div class="container desc">
-    <div class="row">
+            return(        
+            m[2]-l[2])*A+(l[0]-m[0])*T(D);        
+            a.clearRect(0,0,W,W);        
+            J.sort(G);
 
-      <div class="col-lg-2 col-lg-offset-1">
-        <h5>WORK</h5>
-      </div>
-      <div class="col-lg-6">
-        <p>
-          <t>Front-end Developer</t><br/> Example Corp. <br/>
-        </p>
-        <p>
-          <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</more>
-        </p>
-      </div>
-      <div class="col-lg-3">
-        <p>
-          <sm>AUGUST 2012 - CURRENT</sm>
-        </p>
-      </div>
+            for(
+            i=0;
+            L=J[i++];
+            a.drawImage(M[L[3]+1],207+L[0]*A+L[2]*T(D)>>0,L[1]>>1))    
+            {
+                if(i==2e3)
+                a.fillText
+                ('送给露猪猪',U,345);
 
-      <div class="col-lg-6 col-lg-offset-3">
-        <p>
-          <t>Web Designer - Intern</t><br/> Onassis Ltd. <br/>
-        </p>
-        <p>
-          <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</more>
-        </p>
-      </div>
-      <div class="col-lg-3">
-        <p>
-          <sm>JUNE 2010 - JULY 2012</sm>
-        </p>
-      </div>
-    </div>
-    <!--/.row -->
-    <br>
-    <hr>
-  </div>
-  <!--/.container -->
-
-
-  <!--AWARDS DESCRIPTION -->
-  <div class="container desc">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-1">
-        <h5>AWARDS</h5>
-      </div>
-      <div class="col-lg-6">
-        <p>
-          <t>Best Web Design</t><br/> Example Site <br/>
-        </p>
-      </div>
-      <div class="col-lg-3">
-        <p>
-          <sm>NOVEMBER 2013</sm>
-        </p>
-      </div>
-
-      <div class="col-lg-6 col-lg-offset-3">
-        <p>
-          <t>Designer of the Year</t><br/> Awwwards Site
-        </p>
-        <p>
-          <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</more>
-        </p>
-      </div>
-      <div class="col-lg-3">
-        <p>
-          <sm>2013</sm>
-        </p>
-      </div>
-
-    </div>
-    <!--/.row -->
-    <br>
-  </div>
-  <!--/.container -->
-
-
-  <!--SKILLS DESCRIPTION -->
-  <div id="skillswrap">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-1">
-          <h5>SKILLS</h5>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="javascript" height="130" width="130"></canvas>
-          <p>Javascript</p>
-          <br>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="bootstrap" height="130" width="130"></canvas>
-          <p>Bootstrap</p>
-          <br>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="wordpress" height="130" width="130"></canvas>
-          <p>Wordpress</p>
-          <br>
-        </div>
-
-        <div class="col-lg-3 col-lg-offset-3 centered">
-          <canvas id="html" height="130" width="130"></canvas>
-          <p>HTML/CSS</p>
-          <br>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="photoshop" height="130" width="130"></canvas>
-          <p>Photoshop</p>
-          <br>
-        </div>
-        <div class="col-lg-3 centered">
-          <canvas id="illustrator" height="130" width="130"></canvas>
-          <p>Illustrator</p>
-          <br>
-        </div>
-
-      </div>
-      <!--/.row -->
-      <br>
-    </div>
-    <!--/.container -->
-  </div>
-  <!--/ #skillswrap -->
-
-
-
-  <section id="work" name="work">
-    <!--PORTFOLIO DESCRIPTION -->
-    <div class="container desc">
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-1">
-          <h5>PORTFOLIO</h5>
-        </div>
-        <div class="col-lg-6">
-          <p><img class="img-responsive" src="img/port01.jpg" alt=""></p>
-        </div>
-        <div class="col-lg-3">
-          <p>CANALS OF ENGLAND</p>
-          <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> design</sm>
-            </more>
-          </p>
-        </div>
-
-        <div class="col-lg-6 col-lg-offset-3">
-          <p><img class="img-responsive" src="img/port02.jpg" alt=""></p>
-        </div>
-        <div class="col-lg-3">
-          <p>SANKEY</p>
-          <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> front-end</sm>
-            </more>
-          </p>
-        </div>
-
-        <div class="col-lg-6 col-lg-offset-3">
-          <p><img class="img-responsive" src="img/port03.jpg" alt=""></p>
-        </div>
-        <div class="col-lg-3">
-          <p>WE GROW</p>
-          <p>
-            <more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
-              <sm><i class="icon-tag"></i> web design</sm>
-            </more>
-          </p>
-        </div>
-
-      </div>
-      <!--/.row -->
-      <br>
-      <br>
-    </div>
-    <!--/.container -->
-  </section>
-
-  <section id="contact" name="contact">
-    <!--FOOTER DESCRIPTION -->
-    <div id="footwrap">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-2">
-            <h5>CONTACT</h5>
-          </div>
-          <div class="col-lg-4">
-            <p>
-              <t>Email</t><br/> contact@example.com <br/>
-            </p>
-            <p>
-              <t>Adress</t><br/> Some Ave. 987 <br/> Postal 23892 <br/> London, England. <br/>
-            </p>
-            <p>
-              <t>Phone</t><br/> +55 8933-2383 <br/>
-            </p>
-            <p>
-              <t>Social Links</t><br/>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-apple"></i></a>
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <p>
-              <sm>CONTACT FORM</sm>
-            </p>
-            <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
-
-              <div class="form-group">
-                <label for="contact-name">Your Name</label>
-                <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="contact-email">Your Email</label>
-                <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="contact-subject">Subject</label>
-                <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                <div class="validate"></div>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message">Your Message</label>
-                <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-
-              <div class="loading"></div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <div class="form-send">
-                <button type="submit" class="btn btn-large">Send Message</button>
-              </div>
-
-            </form>
-
-          </div>
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.container -->
-    </div>
-    <!--/ #footer -->
-  </section>
-
-  <div id="copyrights">
-    <div class="container">
-      <p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-      <div class="credits">
-        
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/php-mail-form/validate.js"></script>
-  <script src="lib/chart/chart.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
+                if(!(i%7))        
+                a.drawImage(M[13],
+                ((157*(i*i)+T(D*5+i*i)*5)%W)>>0,
+                ((113*i+(D*i)/60)%(290+i/99))>>0);
+            }    
+            D+=.02
+        },1)
+    </script>
 </body>
 </html>
